@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario de contacto moderno y elegante con validación en tiempo real">
+    <title>Formulario de Contacto - Diseño Premium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-gradient"></div>
+    <div class="container">
+        <div class="form-wrapper">
+            <div class="form-header">
+                <h1 class="form-title">Contáctanos</h1>
+                <p class="form-subtitle">Completa el formulario y nos pondremos en contacto contigo pronto</p>
+            </div>
+
+            <form id="contactForm" class="contact-form" novalidate>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="firstName" class="form-label">Nombre</label>
+                        <input 
+                            type="text" 
+                            id="firstName" 
+                            name="firstName" 
+                            class="form-input" 
+                            placeholder="Juan"
+                            required
+                        >
+                        <span class="error-message" id="firstNameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName" class="form-label">Apellido</label>
+                        <input 
+                            type="text" 
+                            id="lastName" 
+                            name="lastName" 
+                            class="form-input" 
+                            placeholder="Pérez"
+                            required
+                        >
+                        <span class="error-message" id="lastNameError"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        class="form-input" 
+                        placeholder="juan.perez@ejemplo.com"
+                        required
+                    >
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone" class="form-label">Teléfono</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        class="form-input" 
+                        placeholder="+54 11 1234-5678"
+                        required
+                    >
+                    <span class="error-message" id="phoneError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject" class="form-label">Asunto</label>
+                    <select id="subject" name="subject" class="form-input" required>
+                        <option value="">Selecciona un asunto</option>
+                        <option value="consulta">Consulta General</option>
+                        <option value="soporte">Soporte Técnico</option>
+                        <option value="ventas">Información de Ventas</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <span class="error-message" id="subjectError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message" class="form-label">Mensaje</label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        class="form-input form-textarea" 
+                        rows="5" 
+                        placeholder="Escribe tu mensaje aquí..."
+                        required
+                    ></textarea>
+                    <span class="error-message" id="messageError"></span>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">Acepto los <a href="#" class="link">términos y condiciones</a></span>
+                    </label>
+                    <span class="error-message" id="termsError"></span>
+                </div>
+
+                <button type="submit" class="submit-button" id="submitBtn">
+                    <span class="button-text">Enviar Mensaje</span>
+                    <span class="button-icon">→</span>
+                </button>
+            </form>
+
+            <div class="success-message" id="successMessage">
+                <div class="success-icon">✓</div>
+                <h2>¡Mensaje Enviado!</h2>
+                <p>Gracias por contactarnos. Te responderemos pronto.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
